@@ -1,65 +1,101 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Link from "next/link";
+import React from "react";
+import Product from "@/components/Product";
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Home = () => {
+    return (
+        <React.Fragment>
+            <div className="product-grid">
+                <Product />
+                <Product />
+                <Product />
+                <Product />
+                <Product />
+                <Product />
+                <Product />
+                <Product />
+                <Product />
+                <Product />
+            </div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+            <style jsx global>{`
+                .product-grid {
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-rows: 410px;
+                    gap: 0.8rem 0.5rem;
+                }
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+                .col-md-3 {
+                    padding: 0.1rem;
+                }
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+                .preview-image-wrapper {
+                    position: relative;
+                    height: 335px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 0.5rem;
+                }
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+                h6 {
+                    margin-bottom: 0.2rem;
+                }
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+                p {
+                    margin: 0;
+                }
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+                .rating {
+                    display: flex;
+                    align-items: center;
+                }
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
-}
+                .fa-star,
+                .fa-star-half-alt {
+                    color: var(--color-yellow);
+                    padding: 0 0.6px;
+                }
+
+                .reviews-amount {
+                    font-size: 11px;
+                    color: var(--color-gray);
+                    margin-left: 0.3rem;
+                }
+
+                a.card:hover {
+                    color: #000;
+                }
+
+                .reaction-wrapper {
+                    position: absolute;
+                    bottom: 0.8rem;
+                    right: 1rem;
+                    display: flex;
+                }
+
+                .reaction-product-button {
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding-top: 1px;
+                    border-radius: 100%;
+                    background-color: rgba(255, 255, 255, 0.4);
+                }
+
+                .reaction-product-button.heart-button {
+                    margin: 0 .5rem;
+                }
+
+                .fa-heart {
+                    padding-top: 1.2px;
+                }
+            `}</style>
+        </React.Fragment>
+    );
+};
+
+export default Home;

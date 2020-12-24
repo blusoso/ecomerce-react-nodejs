@@ -1,16 +1,129 @@
+:root {
+    --globalnav-height: 60px;
+    --globalfooter-height: 60px;
+    --localnav-height: 60px;
+    --color-mint: rgb(51, 216, 180);
+    --color-mint-light: #b6e6d8;
+    --color-green-dark: #28776e;
+    --color-green-light: #a6e9d3;
+    --color-yellow: #ffd100;
+    --color-sky: #40b4e5;
+    --color-blue: #0057ff;
+    --color-purple: #6e70cb;
+    --color-purple-dark: #281b34;
+    --color-red: #ea4c66;
+    --color-pink: #ea4c89;
+    --color-dark: #1e1e20;
+    --color-midgray: #bbbcbc;
+    --color-gray: #696969;
+    --color-gray-light: #fafafb;
+    --color-gray-dark: #3d3d4e;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    letter-spacing: 0.2px;
+    height: 100%;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-blue);
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#__next {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+nav {
+    height: var(--globalnav-height);
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+main {
+    min-height: 100%;
+}
+
+footer {
+    height: var(--globalfooter-height);
+    border-top: 1px solid #e8e8e8;
+    display: flex;
+}
+
+footer p {
+    margin: auto;
+}
+
+.brand {
+    margin-right: auto;
+}
+
+.btn.btn-primary {
+    background-color: rgba(0, 87, 255, 0.135);
+    color: var(--color-blue);
+    border: none;
+    border-radius: 6px;
+    letter-spacing: 0.54px;
+}
+
+.btn.btn-primary:hover {
+    background-color: rgba(0, 87, 255, 0.2);
+}
+
+.btn.btn-secondary {
+    background-color: var(--color-blue);
+    border: none;
+    border-radius: 6px;
+    letter-spacing: 0.54px;
+    padding: 0.55rem 1rem;
+}
+
+.btn.btn-secondary:hover {
+    background-color: rgba(0, 87, 255, 0.9);
+}
+
+.content-container {
+    margin: 1.5rem 2rem;
+}
+
+.card {
+    border: none;
+}
+
+.card-body {
+    padding: 0.8rem;
+}
+
+.blur {
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 14px 0 rgba(31, 38, 135, 0.1);
+}
+
+.disable-icon {
+    color: var(--color-gray);
+}
+
+.cover-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
