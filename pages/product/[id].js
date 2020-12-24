@@ -3,6 +3,7 @@ import Link from "next/link";
 import RatingStar from "@/components/RatingStar";
 import SocialShareProduct from "@/components/product/SocialShare";
 import ProductColorSelector from "@/components/product/ColorSelector";
+import QtyInput from "@/components/form/QtyInput";
 
 const Product = () => {
     return (
@@ -12,6 +13,24 @@ const Product = () => {
                     <i className="fas fa-receipt fa-fw"></i>
                     <p className="mb-0 text-uppercase">Buy Now!</p>
                 </button>
+            </div>
+            <div className="buy-now-panel-wrapper">
+                <div className="product-panel-card blur">
+                    <div className="card-body">
+                        <div className="product-list-grid">
+                            <div
+                                className="preview-buy-now-panel-image cover-image"
+                                style={{ backgroundImage: `url('/images/p1.jpg')` }}
+                            ></div>
+                            <div>
+                                <h6>Yellow Sport Suit - Fit to You. If you want...</h6>
+                                <span className="price-amount">125</span>{" "}
+                                <span className="sub-text">฿ x 1</span>
+                            </div>
+                        </div>
+                        <button className="btn btn-secondary w-100 mt-2">Checkout</button>
+                    </div>
+                </div>
             </div>
             <div className="product-grid-wrapper">
                 <SocialShareProduct />
@@ -69,8 +88,7 @@ const Product = () => {
                     </div>
 
                     <div className="d-flex align-items-center position-relative">
-                        <label className="qty-label">QTY</label>
-                        <input type="text" name="qty" className="qty-input" />
+                        <QtyInput />
                         <button className="btn btn-secondary">Add to basket</button>
                     </div>
 
@@ -107,10 +125,42 @@ const Product = () => {
                     font-size: 0.65rem;
                 }
 
+                .buy-now-panel-wrapper {
+                    position: fixed;
+                    bottom: 7.7rem;
+                    right: 0;
+                    padding: 0 1.7rem;
+                }
+
+                .product-panel-card {
+                    width: 320px;
+                    height: auto;
+                    background-color: rgba(255, 255, 255, 0.135);
+                    border: 1px solid rgba(255, 255, 255, 0.15);
+                    box-shadow: 0 4px 14px 0 rgba(31, 38, 135, 0.1);
+                    border-radius: 0.5rem;
+                }
+
+                .card-body {
+                    padding: 1.1rem;
+                }
+
+                .product-list-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    gap: 0 0.7rem;
+                }
+
                 .product-grid-wrapper {
                     display: grid;
                     grid-template-columns: 80px 1fr 155px 1.5fr;
                     gap: 0 0.8rem;
+                }
+
+                .preview-buy-now-panel-image {
+                    width: 100%;
+                    height: 5rem;
+                    border-radius: 0.5rem;
                 }
 
                 .main-image {
@@ -209,27 +259,6 @@ const Product = () => {
                 .out-of-stock {
                     color: var(--color-red);
                     margin-left: 0.5rem;
-                }
-
-                .qty-label {
-                    font-size: 0.8em;
-                    position: absolute;
-                    top: -7.4px;
-                    left: 7.3px;
-                    background-color: #fff;
-                    width: 2rem;
-                    text-align: center;
-                    color: var(--color-gray);
-                }
-
-                .qty-input {
-                    width: 3rem;
-                    height: 2.5rem;
-                    margin-right: 0.7rem;
-                    border: 1px solid var(--color-midgray);
-                    border-radius: 6px;
-                    padding: 0.5rem;
-                    text-align: center;
                 }
             `}</style>
         </React.Fragment>

@@ -76,6 +76,10 @@ footer p {
     margin-right: auto;
 }
 
+.btn:focus {
+    box-shadow: none;
+}
+
 .btn.btn-primary {
     background-color: rgba(0, 87, 255, 0.135);
     color: var(--color-blue);

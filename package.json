@@ -1,5 +1,6 @@
 {
   "name": "e-commerce",
+  "proxy": "http://127.0.0.1:3000",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +9,7 @@
     "start": "nodemon server"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "next": "10.0.3",
     "react": "17.0.1",

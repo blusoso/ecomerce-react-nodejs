@@ -13,7 +13,7 @@ const NavGlobal = () => {
                     </Link>
                 </div>
                 <div>
-                    <Link href="/">
+                    <Link href="/cart">
                         <a className="pr-3">
                             <i className="fas fa-shopping-bag"></i>
                         </a>
