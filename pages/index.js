@@ -70,20 +70,22 @@ const Home = () => {
 
                 .reaction-wrapper {
                     position: absolute;
-                    bottom: 0.8rem;
-                    right: 1rem;
+                    bottom: 0;
+                    right: 0;
                     display: flex;
+                    z-index: 2;
                 }
 
                 .reaction-product-button {
-                    width: 32px;
-                    height: 32px;
+                    width: 48px;
+                    height: 48px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     padding-top: 1px;
-                    border-radius: 100%;
-                    background-color: rgba(255, 255, 255, 0.4);
+                    border-top-left-radius: .5rem;
+                    border-bottom-right-radius: .5rem;
+                    background-color: rgba(255, 255, 255, .5);
                 }
 
                 .reaction-product-button.heart-button {
@@ -92,6 +94,10 @@ const Home = () => {
 
                 .fa-heart {
                     padding-top: 1.2px;
+                }
+
+                .fa-plus {
+                    color: var(--color-blue)
                 }
             `}</style>
         </React.Fragment>

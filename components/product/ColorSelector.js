@@ -1,9 +1,12 @@
 import React from "react";
 
-const ColorSelector = ({ selectedColor }) => {
+const ColorSelector = ({ w, h, selectedColor }) => {
     return (
         <React.Fragment>
-            <div className={`color-selector ${selectedColor && 'selected'}`} style={{ backgroundColor: "#ea4c89" }}>
+            <div
+                className={`color-selector ${selectedColor && "selected"}`}
+                style={{ backgroundColor: "#ea4c89", width: w, height: h }}
+            >
                 {selectedColor && (
                     <div className="icon-selected">
                         <i className="fas fa-check"></i>
@@ -15,8 +18,6 @@ const ColorSelector = ({ selectedColor }) => {
                 .color-selector {
                     position: relative;
                     display: inline-block;
-                    width: 32px;
-                    height: 32px;
                     border-radius: 100%;
                     margin-right: 0.3rem;
                     cursor: pointer;

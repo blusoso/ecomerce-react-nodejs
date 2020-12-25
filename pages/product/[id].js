@@ -16,6 +16,9 @@ const Product = () => {
             </div>
             <div className="buy-now-panel-wrapper">
                 <div className="product-panel-card blur">
+                    <div className="close-product-box blur">
+                        <i className="fas fa-times fa-xs"></i>
+                    </div>
                     <div className="card-body">
                         <div className="product-list-grid">
                             <div
@@ -24,10 +27,10 @@ const Product = () => {
                             ></div>
                             <div>
                                 <h6>Yellow Sport Suit - Fit to You. If you want...</h6>
-                                <span className="price-amount">125</span>{" "}
-                                <span className="sub-text">฿ x 1</span>
+                                <span className="price-amount">125</span> <span className="sub-text">฿ x 1</span>
                             </div>
                         </div>
+                        <hr className="my-2" />
                         <button className="btn btn-secondary w-100 mt-2">Checkout</button>
                     </div>
                 </div>
@@ -74,11 +77,12 @@ const Product = () => {
                     </div>
 
                     <div className="color-palette">
-                        <ProductColorSelector selectedColor={true} />
-                        <ProductColorSelector />
-                        <ProductColorSelector />
-                        <ProductColorSelector />
-                        <ProductColorSelector />
+                        <ProductColorSelector w={32} h={32} selectedColor={true} />
+                        <ProductColorSelector w={32} h={32} />
+                        <ProductColorSelector w={32} h={32} />
+                        <ProductColorSelector w={32} h={32} />
+                        <ProductColorSelector w={32} h={32} />
+                        <ProductColorSelector w={32} h={32} />
                         {/* <div className="color-selector" style={{ backgroundColor: "#ea4c89" }}></div>
                         <div className="color-selector color-selected" style={{ backgroundColor: "#ffd100" }}></div>
                         <div className="color-selector" style={{ backgroundColor: "#0057ff" }}></div>
@@ -130,15 +134,37 @@ const Product = () => {
                     bottom: 7.7rem;
                     right: 0;
                     padding: 0 1.7rem;
+                    z-index: 2;
                 }
 
                 .product-panel-card {
+                    position: relative;
                     width: 320px;
                     height: auto;
                     background-color: rgba(255, 255, 255, 0.135);
                     border: 1px solid rgba(255, 255, 255, 0.15);
                     box-shadow: 0 4px 14px 0 rgba(31, 38, 135, 0.1);
                     border-radius: 0.5rem;
+                }
+
+                .close-product-box {
+                    position: absolute;
+                    top: -0.8rem;
+                    right: 0;
+                    width: 32px;
+                    height: 32px;
+                    background-color: rgba(255, 255, 255, 0.135);
+                    z-index: 3;
+                    border-radius: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--color-blue);
+                    box-shadow: 0 4px 14px 0 rgba(31, 38, 135, 0.1);
+                }
+
+                .close-product-box > i {
+                    height: 10px;
                 }
 
                 .card-body {
@@ -200,11 +226,6 @@ const Product = () => {
                 .price-amount {
                     font-size: 1.7em;
                     font-weight: 500;
-                }
-
-                .sub-text {
-                    font-size: 0.8em;
-                    color: var(--color-gray);
                 }
 
                 .product-badges {

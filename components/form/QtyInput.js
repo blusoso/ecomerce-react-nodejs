@@ -3,11 +3,13 @@ import React from "react";
 const QtyInput = () => {
     return (
         <React.Fragment>
-            <label className="qty-label">QTY</label>
-            <input type="text" name="qty" className="qty-input" />
-            <div>
-                <button className="btn btn-primary btn-qty">+</button>
-                <button className="btn btn-primary btn-qty mt-1">-</button>
+            <div className="d-flex align-items-center position-relative">
+                <label className="qty-label">QTY</label>
+                <input type="text" name="qty" className="qty-input" />
+                <div>
+                    <button className="btn btn-primary btn-qty">+</button>
+                    <button className="btn btn-primary btn-qty mt-1">-</button>
+                </div>
             </div>
 
             <style jsx>{`

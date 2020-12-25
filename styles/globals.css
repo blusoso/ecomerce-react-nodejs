@@ -6,18 +6,20 @@
     --color-mint-light: #b6e6d8;
     --color-green-dark: #28776e;
     --color-green-light: #a6e9d3;
-    --color-yellow: #ffd100;
+    --color-yellow: rgb(255, 209, 0);
     --color-sky: #40b4e5;
     --color-blue: #0057ff;
+    --color-blue-light: rgba(0, 87, 255, 0.135);
     --color-purple: #6e70cb;
     --color-purple-dark: #281b34;
-    --color-red: #ea4c66;
+    --color-red: rgb(234, 77, 103);
     --color-pink: #ea4c89;
     --color-dark: #1e1e20;
     --color-midgray: #bbbcbc;
     --color-gray: #696969;
     --color-gray-light: #fafafb;
     --color-gray-dark: #3d3d4e;
+    --color-white-light: rgba(255, 255, 255, 0.135);
 }
 
 html,
@@ -104,6 +106,31 @@ footer p {
     background-color: rgba(0, 87, 255, 0.9);
 }
 
+.btn.btn-dark-secondary {
+    background-color: #f3f3f3;
+    color: var(--color-gray-dark);
+    border: none;
+    border-radius: 6px;
+    letter-spacing: 0.54px;
+    padding: 0.55rem 1rem;
+}
+
+.btn.btn-dark-secondary:hover {
+    background-color: #e6e6e6;
+}
+
+.btn.btn-danger {
+    background-color: var(--color-red);
+    border: none;
+    border-radius: 6px;
+    letter-spacing: 0.54px;
+    padding: 0.55rem 1rem;
+}
+
+.btn.btn-danger:hover {
+    background-color: rgba(234, 77, 103, 0.9);
+}
+
 .content-container {
     margin: 1.5rem 2rem;
 }
@@ -130,4 +157,19 @@ footer p {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.sub-text {
+    font-size: 0.8em;
+    color: var(--color-gray);
+}
+
+.blue-text {
+    color: var(--color-blue) !important;
+}
+
+.--center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

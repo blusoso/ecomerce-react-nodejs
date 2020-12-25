@@ -9,11 +9,12 @@ const Product = () => {
                 <a className="card">
                     <div className="preview-image-wrapper" style={{ backgroundImage: `url('images/p1.jpg')` }}>
                         <div className="reaction-wrapper">
-                            <div className="reaction-product-button heart-button blur">
+                            {/* <div className="reaction-product-button heart-button blur">
                                 <i className="fas fa-heart fa-xs disable-icon"></i>
-                            </div>
+                            </div> */}
                             <div className="reaction-product-button cart-button blur">
-                                <i className="fas fa-shopping-bag fa-xs disable-icon"></i>
+                                <i className="fas fa-plus fa-sm"></i>
+                                {/* <i className="fas fa-shopping-bag  disable-icon"></i> */}
                             </div>
                         </div>
                     </div>
@@ -25,7 +26,9 @@ const Product = () => {
                             </div>
 
                             <div className="rating ml-auto">
-                                <p className="price">120 <small>฿</small></p>
+                                <p className="price">
+                                    120 <small>฿</small>
+                                </p>
                             </div>
                         </div>
                     </div>
