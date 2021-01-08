@@ -74,6 +74,12 @@ footer p {
     margin: auto;
 }
 
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
 .brand {
     margin-right: auto;
 }
@@ -143,6 +149,10 @@ footer p {
     padding: 0.8rem;
 }
 
+.bg-white-bright {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 .blur {
     backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -172,4 +182,34 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.form-control-secondary {
+    width: 100%;
+    background-color: var(--color-blue-light);
+    padding: 0.85rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 14px;
+}
+
+.form-control-secondary:active {
+    border: none!important;
+    border-radius: 0.5rem;
+}
+
+::placeholder {
+    color: var(--color-midgray);
+}
+
+.blue-link {
+    color: var(--color-blue) !important;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.blue-link:hover {
+    color: rgba(0, 87, 255, 0.9) !important;
+    text-decoration: underline !important;
+    font-weight: 500;
 }
