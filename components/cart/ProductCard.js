@@ -5,41 +5,39 @@ import ProductColorSelector from "@/components/product/ColorSelector";
 const ProductCartCard = () => {
     return (
         <React.Fragment>
-            <div className="cart-card-grid">
-                <div className="product-card">
-                    <div className="card-body">
-                        <div className="product-selected-icon-wrapper">
-                            <div className="product-selected-icon blur">
-                                <i className="fas fa-check"></i>
+            <div className="product-card">
+                <div className="card-body">
+                    <div className="product-selected-icon-wrapper">
+                        <div className="product-selected-icon blur">
+                            <i className="fas fa-check"></i>
+                        </div>
+                    </div>
+
+                    <div className="close-product-box blur">
+                        <i className="fas fa-times fa-xs"></i>
+                    </div>
+
+                    <div className="product-grid">
+                        <div
+                            className="preview-product-image cover-image"
+                            style={{ backgroundImage: `url('/images/p1.jpg')` }}
+                        ></div>
+                        <div>
+                            <h5>
+                                <ProductColorSelector w={16} h={16} />
+                                Yellow Sport Suit - Fit to You. If you want, you can get it!
+                            </h5>
+                            <div className="qty-wrapper">
+                                <span className="price-amount mr-1">125</span>{" "}
+                                <span className="sub-text mr-1">฿ x</span>
+                                <QtyInput />
                             </div>
-                        </div>
-
-                        <div className="close-product-box blur">
-                            <i className="fas fa-times fa-xs"></i>
-                        </div>
-
-                        <div className="product-grid">
-                            <div
-                                className="preview-product-image cover-image"
-                                style={{ backgroundImage: `url('/images/p1.jpg')` }}
-                            ></div>
-                            <div>
-                                <h5>
-                                    <ProductColorSelector w={16} h={16} />
-                                    Yellow Sport Suit - Fit to You. If you want, you can get it!
-                                </h5>
-                                <div className="qty-wrapper">
-                                    <span className="price-amount mr-1">125</span>{" "}
-                                    <span className="sub-text mr-1">฿ x</span>
-                                    <QtyInput />
-                                </div>
-                                <i className="fas fa-ellipsis-v fa-lg"></i>
-                                {/* <div className="action-panel blur text-center">
+                            <i className="fas fa-ellipsis-v fa-lg"></i>
+                            {/* <div className="action-panel blur text-center">
                                     <button className="btn btn-danger">
                                         <i className="far fa-trash-alt"></i>
                                     </button>
                                 </div> */}
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -61,12 +59,6 @@ const ProductCartCard = () => {
                     justify-content: center;
                     color: var(--color-blue);
                     border-radius: 100%;
-                }
-
-                .cart-card-grid {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 0 1rem;
                 }
 
                 .product-grid {

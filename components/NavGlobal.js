@@ -72,8 +72,7 @@ const NavGlobal = () => {
                 .signup-label {
                     color: var(--color-gray);
                     margin-right: .8rem;
-                    text-decoration: underline;
-                    letter-spacing: 1px;
+                    letter-spacing: .8px;
                 }
 
                 .signup-label:hover {

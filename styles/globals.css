@@ -178,6 +178,14 @@ select {
     color: var(--color-blue) !important;
 }
 
+.blue-light-text {
+    color: var(--color-blue-light);
+}
+
+.gray-text {
+    color: var(--color-gray);
+}
+
 .--center {
     display: flex;
     align-items: center;
@@ -194,7 +202,7 @@ select {
 }
 
 .form-control-secondary:active {
-    border: none!important;
+    border: none !important;
     border-radius: 0.5rem;
 }
 
